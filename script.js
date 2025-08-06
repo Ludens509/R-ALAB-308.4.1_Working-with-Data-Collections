@@ -121,13 +121,21 @@ for (let i = 0; i < cvsData.length; i++) {
 }
 
 // Display the last row
-if (currentCell !== '' || currentRow.length - 1) {
+if (currentCell !== '' || currentRow.length >0) {
 
   containerArrays.push([...currentRow]);
   console.log("----------------------Part 2--------------------");
   console.log(containerArrays);
   console.log("\n");
   console.log("----------------------Part 3--------------------")
-  console.log(newContainerObject);
-
+ // MISSING: Create object for last row too!
+    if (containerArrays.length > 1) { // If it's not just headers
+        let rowObject = {};
+        currentRow.forEach((value, index) => {
+            const key = headers[index].toLowerCase();
+            rowObject[key] = value;
+        });
+        newContainerObject.push(rowObject);
+    }
+    console.log(newContainerObject);
 }
