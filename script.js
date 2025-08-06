@@ -145,4 +145,11 @@ if (currentCell !== '' || currentRow.length > 0) {
   // Remove the last element from the sorted array.
   newContainerObject = newContainerObject.slice(0, -1);
   console.log("new Array", newContainerObject);
+
+  // Insert the following object at index 1:
+   let newObjectInput = { id: "48", name: "Barry", occupation: "Runner", age: "25" };
+    let newArray = [...newContainerObject]; // Create copy for demonstration
+    newArray.splice(1, 0, newObjectInput); // Insert at index 1, delete 0 items
+    console.log("-------After splice(1, 0, newObjectInput)--------");
+    console.log(newArray);
 }
