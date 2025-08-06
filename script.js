@@ -153,9 +153,9 @@ if (currentCell !== '' || currentRow.length > 0) {
     console.log(newArray);
 
     // Add the following object to the end of the array:
-     newObjectInput = { id: "7", name: "Bilbo", occupation: "None", age: "111" };
-     newArray = [...newContainerObject]; // Create copy for demonstration
-    newArray.push(newObjectInput); // push at last row.
+    let newObjectInput1 = { id: "7", name: "Bilbo", occupation: "None", age: "111" };
+    let newArray2 = [...newArray]; // Create copy for demonstration
+    newArray.push(newObjectInput1); // push at last row.
     console.log("-------After pushing/concat newObjectInput)--------");
-    console.log(newArray);
+    console.log(newArray2);
 }
